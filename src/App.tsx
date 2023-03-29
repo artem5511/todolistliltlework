@@ -1,49 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Accordion from './components/Accordion';
+import Rating from './components/Rating';
 
 //function declaration
 function App() {
+    console.log("App rendering")
     //полезное что то
-
     //обязана вернуть JSX
-  return (
-    <div className="App">
-     This is APP component
-        <Rating/>
-        <Accordion/>
-    </div>
-  );
-}
-
-function hello() {
-    debugger
-    alert("Hello")
-}
-
-function Rating() {
     return (
-        <div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
+        <div className="App">
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
+            <Rating/>
         </div>
     );
 }
 
-function Accordion() {
-    return (
-        <div>
-            <h3>Меню</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-    );
+ function AppTitle() {
+     console.log("AppTitle rendering")
+return <>This is APP component</>
 }
-
 export default App;
