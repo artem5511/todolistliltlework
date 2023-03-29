@@ -13,7 +13,6 @@ function App(props: any) {
             {/*<PageTitle title={"This is APP component"}/>*/}
             <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={true}/>
-            {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
