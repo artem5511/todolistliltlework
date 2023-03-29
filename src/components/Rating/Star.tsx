@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Star = (props: any) => {
+type StarPropsType = {
+    selected: boolean
+}
+
+export const Star = (props: StarPropsType) => {
     if (props.selected === true) {
         return <span><b>star</b></span>
     } else {
