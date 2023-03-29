@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Accordion from './components/Accordion';
-import Rating from './components/Rating';
+import Accordion from './components/Accordion/Accordion';
+import Rating from './components/Rating/Rating';
 
 //function declaration
 function App() {
@@ -11,16 +10,20 @@ function App() {
     //обязана вернуть JSX
     return (
         <div className="App">
-            <AppTitle/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <PageTitle title={"This is APP component"}/>
+            Article 1
+            <Rating value={1}/>
+            <Accordion title={"Меню1"}/>
+            <Accordion title={"Меню333"}/>
+            Article 2
+            <Rating value={3}/>
+            <Rating value={5}/>
         </div>
     );
 }
 
- function AppTitle() {
+ function PageTitle(props: any) {
      console.log("AppTitle rendering")
-return <>This is APP component</>
+return <h1>{props.title}</h1>
 }
 export default App;
