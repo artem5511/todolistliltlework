@@ -8,5 +8,4 @@ const Star = () => {
         </div>
     );
 };
-
 export default Star;
