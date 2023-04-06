@@ -137,20 +137,17 @@ function App() {
 
     return (
         <div className="App">
-            <Tasks data1={data1} data2={data2}>
+            <Tasks data1={data1} data2={data2}/>
         </div>
     );
 }
 
 export default App;
 
-
-// --------------------------------------------------------------
-// import React from 'react';
+//*//import React from 'react';
 // import './App.css';
 // import {Tasks} from "./Tasks";
-//
-// export type DataType = {
+// export type DataType =
 //     title: string
 //     tasks: Array<TasksType>
 //     students: Array<string>
