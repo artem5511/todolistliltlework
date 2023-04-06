@@ -137,7 +137,8 @@ function App() {
 
     return (
         <div className="App">
-            <Tasks data1={data1} data2={data2}/>
+            <Tasks data={data1}/>
+            <Tasks data={data2}/>
         </div>
     );
 }
