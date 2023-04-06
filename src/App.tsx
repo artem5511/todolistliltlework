@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Tasks from './components/TASKS';
-
+import Tasks from './components/Tasks';
 
 // Hi Guys!
 // Let's reinforce our current session!
@@ -14,8 +13,8 @@ export type DataTasksType = {
     students: string[]
 }
 
-type TasksType = {
-    askId: number
+export type TasksType = {
+    taskId: number
     title: string
     isDone: boolean
 }
@@ -138,7 +137,7 @@ function App() {
 
     return (
         <div className="App">
-            <Tasks data1={data1} data2={data2}/>
+            <Tasks data1={data1} data2={data2}>
         </div>
     );
 }
@@ -146,7 +145,7 @@ function App() {
 export default App;
 
 
-//--------------------------------------------------------------
+// --------------------------------------------------------------
 // import React from 'react';
 // import './App.css';
 // import {Tasks} from "./Tasks";

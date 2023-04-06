@@ -6,13 +6,12 @@ type TasksPropsType = {
     data2: DataTasksType
 }
 
-
 const Tasks = (props: TasksPropsType) => {
     return (
-        <div>
+        <>
             {props.data1}
-            {props.data2}
-        </div>
+            {props.data1}
+        </>
     );
 };
 
