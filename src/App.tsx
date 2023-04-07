@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Todolist} from './Todolist';
+import exp from 'constants';
 
-export type FilterValuesType = "all" | "active" | "completed" | "delete";
+export type FilterValuesType = "all" | "active" | "completed" |"three" ;
 
 //Hi guys!
 //1. Let's create a 'DELETE ALL TASKS' button, and place it above the filter buttons
@@ -39,31 +40,36 @@ function App() {
         let filteredTasks = tasks.filter(t => t.id != id);
         setTasks(filteredTasks);
     }
-
-    let [filter, setFilter] = useState<FilterValuesType>("all");
-
-    let tasksForTodolist = tasks;
-
-    if (filter === "active") {
-        tasksForTodolist = tasks.filter(t => t.isDone === false);
-    }
-    if (filter === "completed") {
-        tasksForTodolist = tasks.filter(t => t.isDone === true);
-    }
-    if (filter === "delete") {
-        tasksForTodolist = tasks.filter(t => t.isDone === null);
+    const deleteAllTasks = () =>{
+        setTasks([]);
     }
 
-    function changeFilter(value: FilterValuesType) {
-        setFilter(value);
-    }
+
+    // let [filter, setFilter] = useState<FilterValuesType>("all");
+    //
+    // let tasksForTodolist = tasks;
+    //
+    // if (filter === "active") {
+    //     tasksForTodolist = tasks.filter(t => t.isDone === false);
+    // }
+    // if (filter === "completed") {
+    //     tasksForTodolist = tasks.filter(t => t.isDone === true);
+    // }
+    // if (filter === "delete") {
+    //     tasksForTodolist = tasks.filter(t => t.isDone === null);
+    // }
+    //
+    // function changeFilter(value: FilterValuesType) {
+    //     setFilter(value);
+    // }
 
     return (
         <div className="App">
             <Todolist title="What to learn"
-                      tasks={tasksForTodolist}
+                      tasks={tasks}
                       removeTask={removeTask}
-                      changeFilter={changeFilter}/>
+                      deleteAllTasks={deleteAllTasks}
+            />
         </div>
     );
 }
