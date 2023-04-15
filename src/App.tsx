@@ -44,7 +44,6 @@ function App() {
         setTasks([]);
     }
 
-
     // let [filter, setFilter] = useState<FilterValuesType>("all");
     //
     // let tasksForTodolist = tasks;
@@ -78,7 +77,6 @@ export default App;
 
 
 //-------------------------------------------------------------------------
-
 // import React, {useState} from 'react';
 // import './App.css';
 // import {Todolist} from './Todolist';
